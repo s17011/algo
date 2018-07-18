@@ -45,24 +45,24 @@ class BinSearchView {
 
 		System.out.print("要素数:");
 		int num = stdIn.nextInt();
-		int[] x = new int[num];      // 要素数numの配列
+		int[] x = new int[num];
 
 		System.out.println("昇順に入力してください。");
 
-		System.out.print("x[0]:");      // 先頭要素の読込み
+		System.out.print("x[0]:");
 		x[0] = stdIn.nextInt();
 
 		for (int i = 1; i < num; i++) {
 			do {
 			System.out.print("x[" + i + "]:");
 			x[i] = stdIn.nextInt();
-			} while (x[i] < x[i - 1]);   // 一つ前の要素より小さければ再入力
+			} while (x[i] < x[i - 1]);
 		}
 
-		System.out.print("探す値:");      // キー値の読込み
+		System.out.print("探す値:");
 		int ky = stdIn.nextInt();
 
-		int idx = binSearchView(x, num, ky);   // 配列xから値がkyの要素を探索
+		int idx = binSearchView(x, num, ky);
 
 		if (idx == -1)
 			System.out.println("その値の要素は存在しません。");
